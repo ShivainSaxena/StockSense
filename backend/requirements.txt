@@ -1,0 +1,4 @@
+pandas
+yfinance
+prophet
+numpy<2.0
