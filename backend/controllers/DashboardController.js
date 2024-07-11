@@ -91,7 +91,7 @@ const addDashboardStock = async (req, res) => {
   // Define the criteria to check if the object exists in the array
   const filter = {
     email: req.email,
-    dash: { $elemMatch: { symbol: ticker } },
+    dash: { $elemMatch: { symbol: ticker, type } },
   };
   const userDash = await db.collection("dashboards").findOne(filter);
 
